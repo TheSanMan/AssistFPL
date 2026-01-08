@@ -47,3 +47,8 @@ class FPLClient:
         logger.info("fetching_players_history", count=len(player_ids))
         tasks = [self.fetch_player_history(pid) for pid in player_ids]
         return await asyncio.gather(*tasks)
+
+    async def fetch_fixtures(self) -> List[Dict[str, Any]]:
+        """Fetches all fixtures."""
+        logger.info("fetching_fixtures")
+        return await self._get("fixtures/")

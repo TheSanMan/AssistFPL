@@ -1,0 +1,211 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.backLink {
+  display: inline-flex;
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.backLink:hover {
+  color: var(--text-primary);
+}
+
+/* Header */
+.headerCard {
+  margin-bottom: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.playerInfo h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.price {
+  color: var(--accent-success);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Status */
+.statusContainer {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+}
+
+.statusLabel {
+  color: var(--accent-danger);
+  font-weight: 700;
+  margin-right: var(--space-sm);
+}
+
+/* Stats Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.statBox {
+  background: var(--bg-secondary);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Fixtures */
+.sectionTitle {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  border-left: 4px solid var(--accent-primary);
+  padding-left: var(--space-sm);
+}
+
+.fixtureList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.fixtureItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s;
+}
+
+.fixtureItem:hover {
+  transform: translateX(4px);
+  background: var(--bg-card-hover);
+}
+
+.fixtureOpponent {
+  font-weight: 600;
+}
+
+.fixtureMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.difficulty {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.diff-1 {
+  background: #007f3d;
+}
+
+/* Very Easy */
+.diff-2 {
+  background: #00c061;
+}
+
+/* Easy */
+.diff-3 {
+  background: #e7e7e7;
+  color: #000;
+}
+
+/* Moderate */
+.diff-4 {
+  background: #fb2c4e;
+}
+
+/* Hard */
+.diff-5 {
+  background: #810c26;
+}
+
+/* Very Hard */
+
+/* History Table */
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historyTable th,
+.historyTable td {
+  padding: var(--space-sm);
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.historyTable th {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.historyTable tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
